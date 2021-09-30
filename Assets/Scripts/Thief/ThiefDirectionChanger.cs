@@ -23,11 +23,11 @@ public class ThiefDirectionChanger : MonoBehaviour
 
     private void Update()
     {
-        if (_alarm.IsAlarmActive == true && _timeBeforeEscape > _timePassed)
+        if (_alarm.IsAlarmActive && _timeBeforeEscape > _timePassed)
         {
             _timePassed += Time.deltaTime;
         }
-        else if (_alarm.IsAlarmActive == true && _timeBeforeEscape <= _timePassed)
+        else if (_alarm.IsAlarmActive && _timeBeforeEscape <= _timePassed)
         {
             _targetPoint = _escapePoint;
             transform.localScale = _thiefLooksLeft;

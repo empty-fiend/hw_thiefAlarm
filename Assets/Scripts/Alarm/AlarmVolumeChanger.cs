@@ -22,12 +22,12 @@ public class AlarmVolumeChanger : MonoBehaviour
     {
         _audioSource.volume = Mathf.MoveTowards(_audioSource.volume, _requaredVolume, Time.deltaTime / _volumeChangeSpeed);
 
-        if (_alarmThiefSearcher.IsAlarmActive == true && _audioSource.isPlaying == false)
+        if (_alarmThiefSearcher.IsAlarmActive && _audioSource.isPlaying == false)
         {
             _audioSource.Play();
             _requaredVolume = _maxVolume;
         }
-        else if (_alarmThiefSearcher.IsAlarmActive == false && _audioSource.isPlaying == true)
+        else if (_alarmThiefSearcher.IsAlarmActive == false && _audioSource.isPlaying)
         {
             _requaredVolume = 0;
         }
