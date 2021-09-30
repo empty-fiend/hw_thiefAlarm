@@ -1842,7 +1842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeBeforeEscape: 5
-  _alarm: {fileID: 0}
+  _alarm: {fileID: 367481283}
   _escapePoint: {fileID: 1730570419}
   _moneybagPoint: {fileID: 944242458}
 --- !u!1 &1509430136
