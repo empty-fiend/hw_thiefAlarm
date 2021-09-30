@@ -4,7 +4,7 @@ public class ThiefDirectionChanger : MonoBehaviour
 {
     [SerializeField] private float _timeBeforeEscape;
 
-    [SerializeField] private AlarmThiefSearcher _alarm;
+    [SerializeField] private Alarm _alarm;
     [SerializeField] private Transform _escapePoint;
     [SerializeField] private Transform _moneybagPoint;
 

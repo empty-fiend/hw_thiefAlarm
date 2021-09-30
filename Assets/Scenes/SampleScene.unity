@@ -138,9 +138,7 @@ GameObject:
   - component: {fileID: 367481285}
   - component: {fileID: 367481284}
   - component: {fileID: 367481283}
-  - component: {fileID: 367481287}
   - component: {fileID: 367481282}
-  - component: {fileID: 367481286}
   m_Layer: 0
   m_Name: Alarm
   m_TagString: Untagged
@@ -244,7 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ec0966f33cc154c84a97be99ff191a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsAlarmActive: IsAlarmActive
 --- !u!114 &367481283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +254,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb6673d4844fb724099d4e653e58d26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _volumeChangeSpeed: 5
+  _maxVolume: 0.5
+  _thief: {fileID: 1176310789}
 --- !u!61 &367481284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -270,7 +270,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.487147}
+  m_Offset: {x: 5.490937, y: -1.487147}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -281,7 +281,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.974294}
+  m_Size: {x: 11.981874, y: 3.974294}
   m_EdgeRadius: 0
 --- !u!50 &367481285
 Rigidbody2D:
@@ -304,35 +304,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &367481286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367481278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa34ed8b1700b4a43bb9d1f651f59c9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _thief: {fileID: 1176310795}
-  _moneybagPoint: {fileID: 944242458}
-  _escapePoint: {fileID: 1730570419}
---- !u!114 &367481287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367481278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 400f92396fd3f1845b88fefb4807e859, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _volumeChangeSpeed: 5
-  _maxVolume: 0.5
 --- !u!82 &367481288
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1871,7 +1842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeBeforeEscape: 5
-  _alarm: {fileID: 367481286}
+  _alarm: {fileID: 0}
   _escapePoint: {fileID: 1730570419}
   _moneybagPoint: {fileID: 944242458}
 --- !u!1 &1509430136

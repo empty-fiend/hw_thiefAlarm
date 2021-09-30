@@ -1,22 +1,22 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(AlarmThiefSearcher))]
+[RequireComponent(typeof(Alarm))]
 public class AlarmAnimator : MonoBehaviour
 {
     private string _isAlarmActive = "IsAlarmActive";
 
     private Animator _animator;
-    private AlarmThiefSearcher _alarmThiefSearcher;
+    private Alarm _alarm;
 
     private void Start()
     {
-        _alarmThiefSearcher = GetComponent<AlarmThiefSearcher>();
+        _alarm = GetComponent<Alarm>();
         _animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        _animator.SetBool(_isAlarmActive, _alarmThiefSearcher.IsAlarmActive);
+        _animator.SetBool(_isAlarmActive, _alarm.IsAlarmActive);
     }
 }
